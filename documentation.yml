@@ -1,5 +1,5 @@
 toc:
-  - name: Bumble Store
+  - name: Bumble Store State Management
     file: intro.md
   - BumbleStore
   - onStateChange

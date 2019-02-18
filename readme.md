@@ -2,7 +2,7 @@
 
 ### Table of Contents
 
--   [Bumble Store][1]
+-   [Bumble Store State Management][1]
 -   [BumbleStore][2]
     -   [getState][3]
         -   [Parameters][4]
@@ -34,7 +34,7 @@
 -   [getBackgroundPage][30]
     -   [Examples][31]
 
-## Bumble Store
+## Bumble Store State Management
 
 A flexible state management library for Chrome Extensions. Inspired by the React Component state API.
 
@@ -223,7 +223,7 @@ getBackgroundPage().then((bgWindow) => {
 
 Returns **[Promise][34]&lt;[Window][43]>** A Promise that will be fulfilled with the Window object for the background page, if there is one.
 
-[1]: #bumble-store
+[1]: #bumble-store-state-management
 
 [2]: #bumblestore
 

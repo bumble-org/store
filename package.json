@@ -1,0 +1,54 @@
+{
+  "name": "@bumble/store",
+  "version": "0.3.0",
+  "description": "A flexible state management library for Chrome Extensions. Inspired by the React Component state API.",
+  "main": "build/bundle-cjs.js",
+  "module": "build/bundle-esm.js",
+  "author": "<jacksteamdev@gmail.com>",
+  "license": "MIT",
+  "repository": "bumble-ext/store",
+  "keywords": [
+    "bumble",
+    "chrome extension",
+    "extension background page",
+    "extension options page",
+    "extension popup page",
+    "getBackgroundPage",
+    "state management",
+    "state",
+    "store"
+  ],
+  "devDependencies": {
+    "@babel/preset-env": "^7.3.1",
+    "@bumble/stream": "^0.2.1",
+    "documentation": "^9.1.1",
+    "eslint": "^5.14.0",
+    "eslint-plugin-jsdoc": "^4.0.1",
+    "jest": "^24.1.0",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^0.68.0",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-json": "^3.1.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "sinon-chrome": "^2.3.2"
+  },
+  "scripts": {
+    "build": "run-p build:*",
+    "build:rollup": "rollup -c",
+    "build:docs": "npm run docs",
+    "docs": "run-s docs:lint docs:build",
+    "docs:build": "documentation build src/main.js -f md -o readme.md --config documentation.yml",
+    "docs:lint": "documentation lint src/main.js",
+    "docs:watch": "npm run docs:build --watch",
+    "start": "run-p start:*",
+    "start:docs": "run-p docs:watch",
+    "start:rollup": "rollup -c -w",
+    "test": "jest",
+    "postversion": "git push && npm publish"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "./tests/jest.setup.js"
+    ]
+  }
+}

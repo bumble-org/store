@@ -1,6 +1,6 @@
 {
   "name": "@bumble/store",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A flexible state management library for Chrome Extensions. Inspired by the React Component state API.",
   "main": "build/bundle-cjs.js",
   "module": "build/bundle-esm.js",
